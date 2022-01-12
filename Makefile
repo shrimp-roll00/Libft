@@ -3,7 +3,7 @@ MAKEFLAGS += s
 NAME = libft.a
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Werror -Wextra
 
 LIB = ar -rcs
 
@@ -33,7 +33,7 @@ bonus: $(OBJ_B)
 	$(LIB) $(NAME) $^
 
 %.o: %.c $(INC)
-	$(CC) $(CFLAGS) $<
+	$(CC) $(CFLAGS) -c $<
 
 clean:
 	$(RM) $(OBJ) $(OBJ_B)
